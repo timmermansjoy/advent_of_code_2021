@@ -1,27 +1,14 @@
-
-# f = """199
-# 200
-# 208
-# 210
-# 200
-# 207
-# 240
-# 269
-# 260
-# 263""".strip().split("\n")
-
-
+#Make an array of numbers
 f = open("input.txt", "r")
 f = f.read().strip().split("\n")
+f = [int(x) for x in f]
 last = 0
 counter = 0
-f = [int(x) for x in f]
 
+# get the sum of the 3 numbers next to eachother
 sumed = [sum(f[i:i+3]) for i, _ in enumerate(f)]
 
-print(sumed)
-print(f)
-
+#same as 1
 for i in sumed:
     if i > last:
          counter += 1
