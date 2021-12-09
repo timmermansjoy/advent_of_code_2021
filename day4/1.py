@@ -19,9 +19,10 @@ boards = [[[int(z) for z in x if z != ""] for x in y] for y in boards]
 def horizontal(board):
     return any(all(x == '' for x in i) for i in board)
 
-
 def vertical(board):
     return any(all(x == '' for x in i) for i in zip(*board))
+
+
 
 for search_number in given_numbers:
     for i, board in enumerate(boards):
